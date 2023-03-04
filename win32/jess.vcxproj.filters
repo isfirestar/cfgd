@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ldr">
+      <UniqueIdentifier>{40e0fa0d-0878-47f4-a998-e67ce0a9e4d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtime">
+      <UniqueIdentifier>{432830bc-18dc-44dc-8fa7-a23e695dd61f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pro">
+      <UniqueIdentifier>{44a91658-e939-43ab-a7b2-004ad1b76188}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="icom">
+      <UniqueIdentifier>{edfb4911-510a-426f-bcfb-e4528ecf9b78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{3be3cb84-6bf4-4022-beb7-eb8cd2c136e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fs">
+      <UniqueIdentifier>{49e2f2cc-c8fc-4e17-928b-0ef2233b46c1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cJSON.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jess.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jessnet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ldr\jessldr.c">
+      <Filter>ldr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fs\checkpoint.c">
+      <Filter>fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fs\jessfs.c">
+      <Filter>fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fs\proc.c">
+      <Filter>fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\args.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fs\inner.c">
+      <Filter>fs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\runtime\request.c">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\runtime\runtime.c">
+      <Filter>runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pro\binary.c">
+      <Filter>pro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pro\jesspro.c">
+      <Filter>pro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pro\manage.c">
+      <Filter>pro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\pro\variable.c">
+      <Filter>pro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\os\jessos.c">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\os\conf.c">
+      <Filter>os</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cJSON.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jessnet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ldr\jessldr.h">
+      <Filter>ldr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fs\jessfs.h">
+      <Filter>fs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\runtime\request.h">
+      <Filter>runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\runtime\runtime.h">
+      <Filter>runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="..\pro\jesspro.h">
+      <Filter>pro</Filter>
+    </ClInclude>
+    <ClInclude Include="..\os\jessos.h">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\avltree.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\cfifo.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\clist.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\compiler.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\hash.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\logger.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\nis.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\nisdef.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\object.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\atom.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\ifos.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\naos.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\posix_string.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\threading.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\clock.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\icom\threading.h">
+      <Filter>icom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\os\conf.h">
+      <Filter>os</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="jess.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

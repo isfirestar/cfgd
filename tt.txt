@@ -1,0 +1,122 @@
+read driver.dio199.pdocnt motion.navigation.upl_mapping_angle_tolerance
+Nspd\x4A\x0\x0\x0read\r\ndriver.dio199.pdocnt\r\nmotion.navigation.upl_mapping_angle_tolerance
+
+scope\r\nfoundation
+scope\r\ndriver.dio199
+
+dio199.id=199
+dio199.can=100
+dio199.ais.ai[0].nrom=0
+dio199.ais.ai[0].channel=0
+dio199.ais.ai[0].bias_coef=0
+dio199.ais.ai[0].scale_coef=1
+dio199.ais.ai[1].nrom=15
+dio199.ais.ai[1].channel=15
+dio199.ais.ai[1].bias_coef=15
+dio199.ais.ai[1].scale_coef=1
+dio199.aos.ao[0].nrom=10
+dio199.aos.ao[0].channel=10
+dio199.aos.ao[0].bias_coef=10
+dio199.aos.ao[0].scale_coef=10
+dio199.aos.ao[1].nrom=11
+dio199.aos.ao[1].channel=11
+dio199.aos.ao[1].bias_coef=11
+dio199.aos.ao[1].scale_coef=11
+dio199.channel_num.di=16
+dio199.channel_num.ai=2
+dio199.channel_num.ao=2
+dio199.channel_num.do=12
+dio199.name=right
+dio199.latency=0
+dio199.merge=1
+dio199.pdocnt=4
+dio199.node=4
+dio199.port=0
+
+eGo0ZYmG7rA=
+
+echo -ne 'Nspd\x13\x0\x0\x0login\r\neGo0ZYmG7rA=' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x0D\x0\x0\x0rmdir\r\nunknow' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x0c\x0\x0\x0read\r\nunknow' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x18\x0\x0\x0write\r\nunknow.my=deleted' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x09\x0\x0\x0mkdir\r\nmy' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x0D\x0\x0\x0scope\r\nunknow' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x2f\x0\x0\x0read\r\nfoundation.agv_shell.agv_shell.process[?]' | nc 127.0.0.1 440
+echo -ne 'Nspd\x23\x0\x0\x0write\r\nembedded.mnt.to.sub[0].a.c=3'
+
+echo -ne 'Nspd\x49\x0\x0\x0read\r\ndriver.dio[0].pdocnt\r\nmotion.navigation.upl_mapping_angle_tolerance' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x47\x0\x0\x0read\r\nid=1\r\ntoken=20\r\n\r\ndriver.dio.device[1].ais.block[0].start_address' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x1A\x0\x0\x0read\r\ndriver.dio.device[?]' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x3D\x0\x0\x0write\r\ndriver.dio.device[1].ais.block[$].start_address=0x3000' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x3D\x0\x0\x0write\r\ndriver.dio.device[1].ais.block[+].start_address=0x4000' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x10\x0\x0\x00file\r\ndriver.dio' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x53\x0\x0\x0write\r\ndriver.dio.device[0].ais.block[0].start_address=0x2180\r\ndriver.dio.name=left' | nc -4 127.0.0.1 4407
+
+ echo -ne 'Nspd\x25\x0\x0\x0write\r\ndriver.dio.device[0].name=left' | nc 192.168.0.3 4407
+ 
+echo -ne 'Nspd\x0B\x0\x0\x00keepalive\r\n' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x27\x0\x0\x00shit\r\nid=100\r\nname=wahaha\r\n\r\nndriver.dio' | nc -4 127.0.0.1 4407
+
+read\r\ndriver.dio199.ais.ai[?]
+echo -ne 'Nspd\x35\x0\x0\x0read\r\ndriver.dio.device[0].aos.block[0].start_address' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x13\x0\x0\x0read\r\ndriver.dio199' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x28\x0\x0\x0read\r\nfoundation.agv_shell.white_list[0]' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x0a\x0\x0\x00contain\r\n/' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x1f\x0\x0\x00contain\r\ndriver\r\nmotion.vehicle' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x37\x0\x0\x0read\r\nid=1\r\ntoken=20\r\n\r\ndriver.dio199.ais.ai[1].channel' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x26\x0\x0\x0read\r\ndriver.dio199.ais.ai[10].channel' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x2B\x0\x0\x0read\r\nfoundation.agv_shell.local.mclog.port' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x24\x0\x0\x0write\r\ndriver.dio199.latency=deleted' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x41\x0\x0\x0write\r\ndriver.dio.device[0].can=101\r\ndriver.dio.device[1].can=101' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x80\x0\x0\x0write\r\nembedded.vcu.device[+].host=192.168.0.2\r\nembedded.vcu.device[0].data_port=0x5050\r\nembedded.vcu.device[0].ctrl_port=0x5151' | nc -4 127.0.0.1 4407
+
+
+echo -ne 'Nspd\x0c\x0\x0\x0subscribe\r\n/' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x11\x0\x0\x0subscribe\r\nunknow' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x42\x0\x0\x0write\r\ndriver.dio199.ais.ai[1].channel=51\r\ndriver.dio198.name=left' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x27\x0\x0\x0write\r\ndriver.elmo.device[0].name=right' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x5A\x0\x0\x0read\r\ndriver.dio199.pdocnt\r\nmotion.test.key\r\nmotion.navigation.upl_mapping_angle_tolerance' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x27\x0\x0\x0read\r\nfoundations.agv_shell.auto_run[?]' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x1B\x0\x0\x0read\r\njess.app.prot.list[0]' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\xb\x0\x0\x0scope\r\ntest' | nc 192.168.0.246 4407
+echo -ne 'Nspd\x8\x0\x0\x0scope\r\n/' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x26\x0\x0\x0scope\r\nfoundation.agv_shell.white_list' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x26\x0\x0\x00file\r\ndriver.dio199\r\nmotion.navigation' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x2A\x0\x0\x0write\r\ndriver.dio199.ais.ai[+].channel=100' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x1f\x0\x0\x0write\r\njess.app.prot.enable=yes' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x23\x0\x0\x0write\r\njess.app.prot.list[+]=driver' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\xbf\x0\x0\x0write\r\nmap.file.table=/etc/agv/axis_table.txt\r\nmap.file.layout=/etc/agv/layout.bin\r\nmap.file.docks=/etc/agv/docks.xml\r\nmap.file.safety=/etc/agv/safety.xml\r\nmap.file.banks=/etc/agv/banks.xml' | nc 127.0.0.1 4407
+
+echo -ne 'Nspd\x13\x0\x0\x0\r\nscope\r\ndriver.dio' | nc -4 127.0.0.1 4407
+rbin\r\noffset=0\r\nsize=10\r\n\r\n
+echo -ne 'Nspd\x25\x0\x0\x0wbin\r\noffset=0\r\nsize=10\r\n\r\nabcd#1234?' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x0B\x0\x0\x0mkdir\r\njess' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x0B\x0\x0\x0rmdir\r\njess' | nc -4 127.0.0.1 4407
+
+echo -ne 'Nspd\x1f\x0\x0\x0write\r\njess.app.prot.enable=yes' | nc -4 127.0.0.1 4407
+
+
+echo -ne 'Nspd\x27\x0\x0\x0write\r\ndriver.elmo.device[0].name=right' | nc -4 127.0.0.1 4407
+echo -ne 'Nspd\x23\x0\x0\x0write\r\njess.app.prot.list[+]=driver' | nc -4 127.0.0.1 4407
+Nspd 
+write
+fatal

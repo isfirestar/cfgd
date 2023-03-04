@@ -99,9 +99,9 @@ $(eval $(foreach d,$(SRC_DIRS),$(foreach i,$(SRC_SUFFIX),$(call add_newline,vpat
 OBJS = $(foreach i,$(SRC_SUFFIX),$(obj-$i))
 SRCS = $(foreach i,$(SRC_SUFFIX),$(src-$i))
 
-PHONY := clean .mkdir .invoke all detach .test
+PHONY := .info clean .mkdir .invoke all detach .test
 
-all: .mkdir .invoke $(TAGS_DIR)$(TARGET)
+all: .info .mkdir .invoke $(TAGS_DIR)$(TARGET)
 
 define build_obj_x
 $$(obj-$1): $2%.$1.o: %.$1  $(MAKEFILE_LIST)
@@ -141,17 +141,27 @@ detach:
 	done
 
 .test:
-	@echo $(SRC_DIRS)
-	@echo $(obj-c)
+	@echo $(OBJS_DIR)
+
+ifeq ($(TARGET),)
+.info:
+	@echo start building chains
 
 clean:
 	@echo cleaning project.
-	@rm -fr $(BUILD_DIR)
 	@for i in $(INVOKE); \
 	do \
 	if [ -f $$i ]; then make -f $$i clean; fi;\
 	if [ -d $$i ]; then make -C $$i clean; fi \
 	done
+else
+.info:
+	@echo start building $(TARGET)
+
+clean:
+	@if [ ! -d $(OBJS_DIR) ]; then rm -fr $(OBJS_DIR); fi
+	@if [ ! -f $(TAGS_DIR)$(TARGET) ]; then rm -f $(TAGS_DIR)$(TARGET); fi
+endif
 
 .PHONY : $(PHONY)
 

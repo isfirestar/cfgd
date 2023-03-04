@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 
-#include "jessos.h"
+#include "refos.h"
 #include "runtime.h"
 
 /* definition of return value:

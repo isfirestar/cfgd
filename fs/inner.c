@@ -1,6 +1,6 @@
-#include "jessfs.h"
+#include "virfs.h"
 
-#include "jessos.h"
+#include "refos.h"
 
 /* fs server object, def in jessfs.c */
 extern struct fs_server __fs_server;

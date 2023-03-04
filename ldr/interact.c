@@ -1,4 +1,4 @@
-#include "jessnet.h"
+#include "interact.h"
 
 #include "clist.h"
 #include "naos.h"
@@ -8,10 +8,10 @@
 #include "atom.h"
 
 #include "runtime.h"
-#include "jesspro.h"
+#include "order.h"
 #include "tst.h"
-#include "jessos.h"
-#include "jessfs.h"
+#include "refos.h"
+#include "virfs.h"
 
 struct jnet_client_context
 {

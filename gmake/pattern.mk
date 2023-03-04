@@ -148,7 +148,6 @@ ifeq ($(TARGET),)
 	@echo start building chains
 
 clean:
-	@echo cleaning project.
 	@for i in $(INVOKE); \
 	do \
 	if [ -f $$i ]; then make -f $$i clean; fi;\
@@ -159,8 +158,9 @@ else
 	@echo start building $(TARGET)
 
 clean:
-	@if [ ! -d $(OBJS_DIR) ]; then rm -fr $(OBJS_DIR); fi
-	@if [ ! -f $(TAGS_DIR)$(TARGET) ]; then rm -f $(TAGS_DIR)$(TARGET); fi
+	@echo cleaning project $(TARGET)
+	@if [ -d $(OBJS_DIR) ]; then rm -fr $(OBJS_DIR); fi
+	@if [ -f $(TAGS_DIR)$(TARGET) ]; then rm -f $(TAGS_DIR)$(TARGET); fi
 endif
 
 .PHONY : $(PHONY)

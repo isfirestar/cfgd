@@ -1,6 +1,6 @@
 #include "conf.h"
 
-#include "jessos.h"
+#include "refos.h"
 
 #include "ifos.h"
 #include "clist.h"

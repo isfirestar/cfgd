@@ -1,4 +1,4 @@
-#include "jesspro.h"
+#include "order.h"
 
 #include <assert.h>
 #include <stdio.h>
@@ -8,9 +8,9 @@
 #include "atom.h"
 
 #include "runtime.h"
-#include "jessfs.h"
-#include "jessnet.h"
-#include "jessos.h"
+#include "virfs.h"
+#include "interact.h"
+#include "refos.h"
 #include "conf.h"
 
 #define RESP_BUFF_SIZE    		(5 << 20)	/* 5MByte space to save the jesspro_response packet */

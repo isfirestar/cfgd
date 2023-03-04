@@ -6,7 +6,7 @@
 
 #include "getopt.h"
 
-#include "jessfs.h"
+#include "virfs.h"
 
 #include "ifos.h"
 
@@ -30,14 +30,14 @@ static void arg_display_usage()
 {
     static const char *usage_context =
             "NAME\n"
-            "\tjess - Json Environment Simulation Service\n"
+            "\tcfgd - a high efficient and distribution configure service\n"
             "\n"
             "SYNOPSIS\n"
-            "\tjess\n"
+            "\tcfgd\n"
             "\t\t[-h|--help] display usage context and help informations\n"
             "\t\t[-v|--version] display versions of executable archive\n"
             "\t\t[-r|--reorganization] reorganization configure from /etc/agv/ base directory\n"
-            "\t\t[-P|--ServicePort] change the service TCP port of this jess instance\n"
+            "\t\t[-P|--ServicePort] change the service TCP port of this cfgd instance\n"
             "\t\t[-f|--ConfigFilePath] set/change the program self config file\n"
             ;
 

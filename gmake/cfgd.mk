@@ -9,7 +9,7 @@ VERSION := 1.0.0
 TARGET := $(PROGRAM)
 
 # add include directory, path MUST end with slash
-INC_DIRS := $(SOLUTION_DIR) $(SOLUTION_DIR)fs/ $(SOLUTION_DIR)ldr/ $(SOLUTION_DIR)os/ $(SOLUTION_DIR)runtime/ $(SOLUTION_DIR)pro/
+INC_DIRS := $(SOLUTION_DIR)fs/ $(SOLUTION_DIR)ldr/ $(SOLUTION_DIR)os/ $(SOLUTION_DIR)runtime/ $(SOLUTION_DIR)pro/
 INC_DIRS += $(FW_DIR)include/ $(FW_DIR)src/posix/
 
 # add include directory, this variable allow framework force traverse and include all head files in entire directoy and it's sub directory
@@ -17,7 +17,7 @@ INC_DIRS += $(FW_DIR)include/ $(FW_DIR)src/posix/
 INC_ENTIRE_DIRS :=
 
 # add source directory, compiler shall compile all files which with $(SRC_SUFFIX) in these folders, path MUST end with slash
-SRC_DIRS := $(SOLUTION_DIR) $(SOLUTION_DIR)fs/ $(SOLUTION_DIR)ldr/ $(SOLUTION_DIR)os/ $(SOLUTION_DIR)pro/ $(SOLUTION_DIR)runtime/
+SRC_DIRS := $(SOLUTION_DIR)fs/ $(SOLUTION_DIR)ldr/ $(SOLUTION_DIR)os/ $(SOLUTION_DIR)pro/ $(SOLUTION_DIR)runtime/
 SRC_DIRS += $(FW_DIR)src/
 
 # add source directory, this variable allow framework force traverse and include all source files in entire directoy and it's sub directory

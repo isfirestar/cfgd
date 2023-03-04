@@ -1,14 +1,12 @@
-#include "jessfs.h"
+#include "virfs.h"
 
 #include <string.h>
 
 #include "runtime.h"
-#include "jessldr.h"
-#include "jessos.h"
+#include "ldr.h"
+#include "refos.h"
 #include "request.h"
-#include "jesspro.h"
-
-#define JESS_VERSION "VersionOfProgramDefinition-ChangeInMakefile"
+#include "order.h"
 
 static int procfs_config_update(const char *command, struct jessrt_configure_node **archive)
 {
@@ -152,7 +150,7 @@ int procfs_mark_version()
 	char holder[128];
 	sprintf_s(update, sizeof(update), "proc.jess.version=%s", jess_get_program_version(holder, sizeof(holder)));
 #else
-	strcpy(update, "proc.jess.version="JESS_VERSION );
+	strcpy(update, "proc.jess.version="_BUILTIN_VERSION );
 #endif
 	return procfs_config_update(update, &archive);
 }
@@ -163,7 +161,7 @@ const char *procfs_get_version()
 	static char holder[128];
 	return jess_get_program_version(holder, sizeof(holder));
 #else
-	return JESS_VERSION;
+	return _BUILTIN_VERSION;
 #endif
 }
 

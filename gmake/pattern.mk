@@ -83,7 +83,7 @@ BUILD_DIR := ./build/
 endif
 
 # define the middle directory for build
-OBJS_DIR = $(BUILD_DIR)objs/
+OBJS_DIR = $(BUILD_DIR)objs/$(TARGET)/
 TAGS_DIR = $(BUILD_DIR)bin/
 
 # expand SRC_DIRS
@@ -136,13 +136,13 @@ detach:
 .invoke:
 	@for i in $(INVOKE); \
 	do \
-	if [ -f $$i ]; then +make -f $$i; fi;\
-	if [ -d $$i ]; then +make -C $$i; fi \
+	if [ -f $$i ]; then make -f $$i; fi;\
+	if [ -d $$i ]; then make -C $$i; fi \
 	done
 
 .test:
 	@echo $(SRC_DIRS)
-	@echo $(src-c)
+	@echo $(obj-c)
 
 clean:
 	@echo cleaning project.

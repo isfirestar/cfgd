@@ -23,7 +23,7 @@ SRC_DIRS :=
 SRC_ENTIRE_DIRS :=
 
 # add some source file which didn't in any of $(SRC_DIRS)
-SRC_ADDON := $(SOLUTION_DIR)easycfgd/easycfgd.c
+SRC_ADDON := $(SOLUTION_DIR)easycfgd/easycfgd2.c
 
 # exclude some source file which maybe in one of $(SRC_DIRS)
 SRC_EXCLUDE :=
@@ -44,7 +44,7 @@ CROSS_COMPILER_PREFIX :=
 CFLAGS_ADDON := -D__GNU_SOURCE
 
 # user define link-time options
-LDFALGS_ADDON := -pthread -ldl -lrt -L $(SOLUTION_DIR) -lnax
+LDFALGS_ADDON := -pthread -ldl -lrt -L ./ -lnax
 
 # target architecture, can be one of  (X64/X8664/IA64/X86_64, X86/I386, ARM/ARM32, ARM64)
 ARCH := X64

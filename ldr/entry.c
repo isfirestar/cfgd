@@ -92,7 +92,9 @@ int main(int argc, char **argv)
 	}
 
 	/* determine the port for service */
-	arg_query_port(&port);
+	if (!os_query_conf_integer("port", &port)) {
+		port = arg_query_port();
+	}
 	rt_echo("service port is:%u", port);
 	return jnet_startup(NULL, port);
 }

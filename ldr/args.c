@@ -16,7 +16,6 @@ static const struct option long_options[] = {
     {"help", no_argument, NULL, kInvisibleOptIndex_GetHelp},
     {"version", no_argument, NULL, kInvisibleOptIndex_GetVersion},
     {"reorganization", no_argument, NULL, kInvisibleOptIndex_Reorganization},
-    {"ServicePort", required_argument, NULL, kInvisibleOptIndex_ServicePort },
     {"ConfigFilePath", required_argument, NULL, kInvisibleOptIndex_ConfigFilePath },
     {NULL, 0, NULL, 0}
 };
@@ -37,7 +36,6 @@ static void arg_display_usage()
             "\t\t[-h|--help] display usage context and help informations\n"
             "\t\t[-v|--version] display versions of executable archive\n"
             "\t\t[-r|--reorganization] reorganization configure from /etc/agv/ base directory\n"
-            "\t\t[-P|--ServicePort] change the service TCP port of this cfgd instance\n"
             "\t\t[-f|--ConfigFilePath] set/change the program self config file\n"
             ;
 
@@ -64,9 +62,7 @@ static void arg_display_author_information()
 
 void arg_query_port(uint16_t *port)
 {
-    if (port) {
-        *port = __arg_parameters.port;
-    }
+    return __arg_parameters.port;
 }
 
 const char *arg_query_cfgfile()
@@ -89,13 +85,6 @@ int arg_analyze_input(int argc, char **argv)
 			case kInvisibleOptIndex_Reorganization:
             case 'r':
                 retval |= kInvisibleOptIndex_Reorganization;
-                break;
-			case kInvisibleOptIndex_ServicePort:
-            case 'P':
-                if (optarg) {
-                    __arg_parameters.port = (uint16_t)strtoul(optarg, NULL, 10);
-                    retval |= kInvisibleOptIndex_ServicePort;
-                }
                 break;
             case kInvisibleOptIndex_ConfigFilePath:
             case 'f':

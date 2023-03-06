@@ -1,0 +1,4 @@
+#cmakedefine nax_VERSION_MAJOR @nax_VERSION_MAJOR@
+#cmakedefine nax_VERSION_MINOR @nax_VERSION_MINOR@
+#cmakedefine nax_VERSION_PATCH @nax_VERSION_PATCH@
+#cmakedefine nax_VERSION_WTEAK @nax_VERSION_TWEAK@

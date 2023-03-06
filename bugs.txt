@@ -1,0 +1,5 @@
+1. write dir.file=value MUST fail but return a success
+2. add some fields in any archive,and than recover from a checkpoint, 
+	the additional fields are still exist.
+
+3. delete proc/jess_checkpoint are ineffective

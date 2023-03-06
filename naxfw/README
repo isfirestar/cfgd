@@ -1,28 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@isfirestar 
-isfirestar
-/
-swnet-linux
-Private
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-Beta Try the new code view
-swnet-linux/README
-@isfirestar
 isfirestar 大幅度调整EPOLL在异步链接建立过程中的行为方式
 Latest commit 00e8a8f on Nov 26, 2019
  History
@@ -121,18 +96,6 @@ if (evts[i].events & EPOLLOUT) {
  *   UDP组播是采用的无连接,数据报的连接方式，所以是不可靠的。也就是数据能不能到达接受端和数据到达的顺序都是不能保证的。但是由于UDP不用保证数据 的可靠性，所有数据的传送效率是很快的。
  */
  int udp_joingrp(HUDPLINK link, const char *ipstr, uint16_t port)
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-swnet-linux/README at master · isfirestar/swnet-linux
+
+
+

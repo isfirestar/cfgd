@@ -3,7 +3,7 @@ include predefine.mk
 PROGRAM := cfgd
 
 # specify the program version
-VERSION := 1.0.0
+VERSION := 2.0.0
 
 # TARGET shall be the output file when success compile
 TARGET := $(PROGRAM)

@@ -44,8 +44,7 @@ int main(int argc, char **argv)
 	nis_checr(&ecr);
 
 	/* Initialization of basic components of jessfs */
-	/* 20210630: Jess doesn't fresh disk automaticly */
-	//fs_initial();
+	fs_initial();
 
 	/* specify order by application command line */
 	if (charg & kInvisibleOptIndex_Reorganization) {

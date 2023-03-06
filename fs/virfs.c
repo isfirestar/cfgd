@@ -371,7 +371,7 @@ static void *fs_flush_check(void *p)
 			equal to or large than 10000 updates in 60 seconds,
 		 	equal to or large than 10 updates in 300 seconds,
 		 	equal to or large than 1 updates in 900 seconds  */
-		if ( (writes >= 10000) || (seconds >= 900) || (seconds >= 300 && writes >= 10) ) {
+		if ( (writes >= 10000 && seconds >= 60) || (seconds >= 900) || (seconds >= 300 && writes >= 10) ) {
 			pro_append_sync();
 			writes = seconds = 0;
 		}

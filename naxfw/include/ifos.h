@@ -116,6 +116,7 @@ PORTABLEAPI(nsp_status_t) ifos_file_seek(file_descriptor_t fd, uint64_t offset);
  * negative indicate a error */
 PORTABLEAPI(int) ifos_file_read(file_descriptor_t fd, void *buffer, int size);
 PORTABLEAPI(int) ifos_file_write(file_descriptor_t fd, const void *buffer, int size);
+PORTABLEAPI(int) ifos_file_write_position(file_descriptor_t fd, uint64_t offset, const void *buffer, int size);
 PORTABLEAPI(void) ifos_file_close(file_descriptor_t fd);
 PORTABLEAPI(nsp_status_t) ifos_file_flush(file_descriptor_t fd);
 

@@ -655,6 +655,18 @@ int ifos_file_write(file_descriptor_t fd, const void *buffer, int size)
     return offset;
 }
 
+int ifos_file_write_position(file_descriptor_t fd, uint64_t offset, const void *buffer, int size)
+{
+    nsp_status_t status;
+	
+    status = ifos_file_seek(fd, offset);
+    if (!NSP_SUCCESS(status)) {
+        return status;
+    }
+    
+    return ifos_file_write(fd, buffer, size);
+}
+
 void ifos_file_close(file_descriptor_t fd)
 {
     if ( unlikely(fd < 0) ) {
